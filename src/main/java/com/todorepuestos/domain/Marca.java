@@ -4,9 +4,9 @@ package com.todorepuestos.domain;
 public class Marca {
     private Long idMarca;
     
-    private String nombre;
-    private String logo_url;
-    private String descripcion;
+    public String nombre;
+    public String logo_url;
+    public String descripcion;
 
     public Marca() {
     }
