@@ -7,27 +7,27 @@ import java.util.List;
 
 public class Orden implements Serializable{
     
-    private Long idOrden;
+    public Long idOrden;
     
-    private Date fechaPedido;
+    public Date fechaPedido;
     
-    private String correoElectronico;
+    public String correoElectronico;
     
-    private String estado;
+    public String estado;
 
-    private Date fechaEntrega;
+    public Date fechaEntrega;
     
-    private Date ultimaActualizacion;
+    public Date ultimaActualizacion;
     
-    private List<Repuesto> repuestos;
+    public List<Repuesto> repuestos;
     
-    private String tipoEntrega;
+    public String tipoEntrega;
     
-    private String direccionEntrega;
+    public String direccionEntrega;
     
-    private Long idTallerEntrega;
+    public Long idTallerEntrega;
     
-    private String metodoPago;
+    public String metodoPago;
      
     public Orden() {
     }

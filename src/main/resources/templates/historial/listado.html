@@ -10,6 +10,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>Crear Historial Aqui</div>
+        <h1>Historial de Pedidos</h1>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Fecha de Pedido</th>
+                    <th>Correo Electrónico</th>
+                    <th>Estado</th>
+                    <th>Fecha de Entrega</th>
+                    <th>Última Actualización</th>
+                    <th>Repuestos</th>
+                    <th>Tipo de Entrega</th>
+                    <th>Dirección de Entrega</th>
+                    <th>Id Taller</th>
+                    <th>Método de Pago</th>
+                </tr>
+            </thead>
+            <tbody th:if="${ordenes != null and !ordenes.empty}">
+                <tr th:each="item : ${ordenes}">
+                    <td><span th:text="${item.fechaPedido}"></span></td>  
+                    <td><span th:text="${item.correoElectronico}"></span></td> 
+                    <td><span th:text="${item.estado}"></span></td> 
+                    <td><span th:text="${item.fechaEntrega}"></span></td> 
+                    <td><span th:text="${item.ultimaActualizacion}"></span></td> 
+                    <td><span th:text="${item.repuestos}"></span></td> 
+                    <td><span th:text="${item.tipoEntrega}"></span></td> 
+                    <td><span th:text="${item.direccionEntrega}"></span></td>
+                    <td><span th:text="${item.idTallerEntrega}"></span></td>
+                    <td><span th:text="${item.metodoPago}"></span></td>
+                </tr>
+                
+            </tbody>
+            
+            <tbody th:if="${ordenes == null or ordenes.empty}">
+                <tr>
+                   
+                </tr>
+            </tbody>
     </body>
 </html>

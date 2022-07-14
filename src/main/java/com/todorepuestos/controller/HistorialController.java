@@ -34,16 +34,18 @@ public class HistorialController {
         
         ordenes.add(new Orden(
             new Date(1455142134), 
-            "test2@test.com", 
-            "Completo", 
+            "test1@test.com", 
+            "Pagado", 
             null, 
             new Date(1455142134), 
             null, 
-            "Domicilio", 
-            "Teste de Direccion", 
-            Long.parseLong("0"), 
-            "Tarjeta"
+            "En Taller", 
+            "Test1 de Direccion 1", 
+            Long.parseLong("1"), 
+            "Efectivo"
         ));
+     
+     
         
         model.addAttribute("ordenes",ordenes);
 
