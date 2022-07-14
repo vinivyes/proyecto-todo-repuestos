@@ -2,9 +2,9 @@
 package com.todorepuestos.domain;
 
 public class Carrito {
-    private Repuesto repuesto;
+    public Repuesto repuesto;
     
-    private int cantidad;
+    public int cantidad;
 
     public Carrito() {
     }
@@ -13,5 +13,8 @@ public class Carrito {
         this.repuesto = repuesto;
         this.cantidad = cantidad;
     }
-    
+ 
+    public double precioTotal() {
+        return cantidad * repuesto.precio;
+    }
 }

@@ -12,19 +12,22 @@ public class Repuesto {
     
     private Long idRepuesto;
     
-    private Marca marca;
+    public Marca marca;
     
-    private String nombre;
-    private String imagen_url;
-    private String descripcion;
+    public String nombre;
+    public String imagen_url;
+    public String descripcion;
+    
+    public double precio;
 
     public Repuesto() {
     }
 
-    public Repuesto(Marca marca, String nombre, String imagen_url, String descripcion) {
+    public Repuesto(Marca marca, String nombre, String imagen_url, String descripcion, double precio) {
         this.marca = marca;
         this.nombre = nombre;
         this.imagen_url = imagen_url;
         this.descripcion = descripcion;
+        this.precio = precio;
     }    
 }

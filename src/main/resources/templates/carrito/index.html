@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Carrito</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/carrito.css" type="text/css">
+    </head>
+    <body>
+        <div class="listado-carrito">
+            <div th:each="item : ${carrito}" class="linea-carrito">
+                | Nombre del Repuesto: 
+                <h4 class="nombre-repuesto" th:text="${item.repuesto.nombre}"></h4>
+                | Cantidad:
+                <h5 class="cantidad-repuesto" th:text="${item.cantidad}"></h5>
+                | Precio Total:
+                <h5 class="precio-repuesto" th:text="${item.precioTotal()}"></h5>
+            </div>
+        </div>
+        
+        <div class="acciones">
+            <input type="button" value="Pagar" name="btn-pago" />
+        </div>
+    </body>
+</html>

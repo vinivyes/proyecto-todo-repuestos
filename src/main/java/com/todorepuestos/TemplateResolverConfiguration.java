@@ -22,7 +22,7 @@ public class TemplateResolverConfiguration {
         
         return templateResolver;
     }
-    
+     
         
     @Bean
     public SpringResourceTemplateResolver TemplateResolver_1() {
@@ -33,6 +33,35 @@ public class TemplateResolverConfiguration {
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setOrder(1);
+        templateResolver.setCheckExistence(true);
+        
+        return templateResolver;
+    }
+    
+    
+    @Bean
+    public SpringResourceTemplateResolver TemplateResolver_2() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        
+        templateResolver.setPrefix("templates/carrito/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setOrder(2);
+        templateResolver.setCheckExistence(true);
+        
+        return templateResolver;
+    }   
+    
+    @Bean
+    public SpringResourceTemplateResolver TemplateResolver_3() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        
+        templateResolver.setPrefix("templates/css/");
+        templateResolver.setSuffix(".css");
+        templateResolver.setTemplateMode(TemplateMode.CSS);
+        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setOrder(3);
         templateResolver.setCheckExistence(true);
         
         return templateResolver;

@@ -1,0 +1,27 @@
+.listado-carrito{    
+    align-content: center;
+    
+    border: 2px solid #333;
+    
+    padding: 4px 4px;
+}
+
+.linea-carrito{    
+    align-content: center;
+    
+    border: 1px dashed #222;
+        
+    display: flex;
+    
+    flex-wrap: wrap;
+    
+    align-items: center;
+}
+
+.acciones {
+    justify-content: center;
+    
+    display: flex;
+    
+    margin-top: 24px;
+}
