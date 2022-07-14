@@ -11,6 +11,10 @@ public class Marca {
     public Marca() {
     }
 
+    public Marca(String nombre) {
+        this.nombre = nombre;
+    }
+    
     public Marca(String nombre, String logo_url, String descripcion) {
         this.nombre = nombre;
         this.logo_url = logo_url;
